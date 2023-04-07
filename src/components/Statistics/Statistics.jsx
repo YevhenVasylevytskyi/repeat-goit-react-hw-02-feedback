@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Notification from "components/Notification/Notification";
 
 function Statistics({ good, neutral, bad, total, positivePercentage }) {
@@ -17,11 +18,16 @@ function Statistics({ good, neutral, bad, total, positivePercentage }) {
             : positivePercentage} %
         </li>
       </ul>
-      }
-      
-    </>
-    
+      }      
+    </>    
   )
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
 };
 
 export default Statistics;
