@@ -3,6 +3,8 @@ import Statistics from "./Statistics/Statistics.jsx";
 import FeedbackOptions from "./FeedbackOptions/FeedbackOptions.jsx";
 import Section from "./Section/Section.jsx";
 
+import s from "./App.module.css"
+
 export class App extends Component {
   constructor() {
     super();
@@ -34,7 +36,7 @@ export class App extends Component {
     const keys = Object.keys(this.state);
 
     return (
-      <div>
+      <div className={s.Container}>
         <Section title="Please leave feedback">
 
           <FeedbackOptions

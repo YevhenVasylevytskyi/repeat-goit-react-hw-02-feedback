@@ -1,4 +1,7 @@
+import Button from '@mui/material/Button';
 import PropTypes from "prop-types";
+
+import s from "./FeedbackOptions.module.css"
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -6,17 +9,19 @@ function capitalizeFirstLetter(string) {
 
 function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <div>
+    <div className={s.FeedbackOptions}>
       {options.map(el => {
 
         return (
-          <button
+          <Button
+            className={s.Button}
+            variant="contained"
             type="button"            
             key={el}
             onClick={() => onLeaveFeedback(el)}
           >
             {capitalizeFirstLetter(el)}
-          </button>
+          </Button>
         );
       })}
     </div>
